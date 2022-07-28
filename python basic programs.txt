@@ -1,0 +1,125 @@
+
+1). Find the given number is prime number
+
+num=int(input("Enter the number: "))
+for x in range(2,num):
+    if(num%x==0):
+        print(num,"is not prime number")
+        break
+else:
+    print(num,"is prime number")
+
+
+2) Find prime numbers
+
+a=int(input("No: "))
+for x in range(2,a):
+    for y in range(2,x):
+        count=0
+        if (x%y==0):
+            count +=1
+            break
+        elif(count==2):
+            break
+    else:
+        print(x,"is prime number")
+
+3) Find fibbonacci series
+
+a=0
+b=1
+n=int(input("No: "))
+while(a<n):
+    print(a)
+    c=a+b
+    a=b
+    b=c
+
+4) Find factorial number
+
+n=int(input("No: "))
+for x in range(1,n):
+    n=n*x
+print(n)
+
+5) Find odd or even number
+
+n=int(input("No: "))
+if(n%2==0):
+    print(n,"is even number")
+else:
+    print(n,"is odd number")
+
+6) Find simple interest
+
+def si(p,n,r):
+    si=p*n*r/100
+    return si
+print("simple interest of given values:",si(5,10,15))
+
+7) Find vowel and replace it
+
+vow='AEIOUaeiou'
+re_word='m'
+char='python'
+for x in char:
+    if x in vow:
+        char=char.replace(x,re_word)
+        print(char)
+
+8) The given year is leap year or not
+
+year=int(input("Enter the year: "))
+if(year%400==0):
+    print("leap year")
+elif(year%4==0):
+    print("leap year")
+else:
+    print("not leap year")
+
+9) The number is palindrome or not
+
+num=input("Enter the number: ")
+list1=num[::-1]
+if (num==list1):
+    print(num,"is palindrome")
+else:
+    print(num,"is not palindrome")
+
+10) The number is armstrong or not
+
+num=int(input("Enter the number: "))
+count=len(str(num))
+ans=0
+temp=num
+while(temp>0):
+    p=temp%10
+    ans=ans+(p**count)
+    temp=temp//10
+if (num==ans):
+    print(num,"is armstrong number")
+else:
+    print(num,"is not armstrong number")
+
+11) Find quadratic equation
+
+import cmath
+
+a=int(input("Enter a value: "))
+b=int(input("Enter b value: "))
+c=int(input("Enter c value: "))
+
+d=(b**2)-(4*a*c)
+ans1=(-b+cmath.sqrt(d))/2*a
+ans2=(-b-cmath.sqrt(d))/2*a
+
+print(ans1,ans2)
+
+
+
+
+
+
+
+
+
